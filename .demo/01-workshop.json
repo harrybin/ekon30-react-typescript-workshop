@@ -31,8 +31,7 @@
       "description": "Props, Events und lokale Auswahl nachvollziehen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
-        { "action": "open", "path": "exercises/03-components-hooks.md" },
-        { "action": "open", "path": "workshop-demo/DemoApp.tsx" },
+        { "action": "executeVSCodeCommand", "command": "vscode.open", "path": "exercises/03-components-hooks.md" },
         { "action": "highlight", "path": "workshop-demo/DemoApp.tsx", "startPlaceholder": "function SessionCard(", "endPlaceholder": "type LoadState =" }
       ]
     },
@@ -52,8 +51,7 @@
       "description": "Abgeleitete Liste und gemeinsame Merkliste zeigen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
-        { "action": "open", "path": "exercises/05-context.md" },
-        { "action": "open", "path": "workshop-demo/DemoApp.tsx" },
+        { "action": "executeVSCodeCommand", "command": "vscode.open", "path": "exercises/05-context.md" },
         { "action": "highlight", "path": "workshop-demo/DemoApp.tsx", "startPlaceholder": "const tracks =", "endPlaceholder": "return (" }
       ]
     },
@@ -63,8 +61,7 @@
       "description": "Erfolg, Fehler, leere Liste und Validierung zeigen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
-        { "action": "open", "path": "exercises/06-fetch.md" },
-        { "action": "open", "path": "workshop-demo/DemoApp.tsx" },
+        { "action": "executeVSCodeCommand", "command": "vscode.open", "path": "exercises/06-fetch.md" },
         { "action": "highlight", "path": "workshop-demo/DemoApp.tsx", "startPlaceholder": "async function loadSessions()", "endPlaceholder": "void loadSessions()" }
       ]
     },
