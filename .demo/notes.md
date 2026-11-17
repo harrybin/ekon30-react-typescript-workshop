@@ -1,34 +1,36 @@
 # Moderationshinweise
 
-Zeiten umfassen Vorführung, eigenständige Übung, Fragen und kurze Pausen.
 Die Szenen öffnen und markieren Dateien; sie ändern keine Dateien und tippen
 keinen Code automatisch. Die Referenz-App ist eine fertige Orientierung, keine
 Ersatzlösung für die eigene Übung.
+Für die Einrichtung und den Serverstart unter Windows PowerShell verwenden;
+die Projekt-README beschreibt auch die macOS-Alternative.
 
-1. **Tooling (20 min):** npm-Skripte, `index.html`, `src/main.tsx` und
+1. **Tooling:** npm-Skripte, `index.html`, `src/main.tsx` und
    `vite.config.ts` zeigen. App und DevTools öffnen, Breakpoint setzen,
    schmalen und breiten Viewport vergleichen. Checkpoint: Node im
    Entwicklungsprozess versus JavaScript im Browser.
-2. **TypeScript (30 min):** `Session` und `ApiResult<T>` untersuchen. In der
+2. **TypeScript:** `Session` und `ApiResult<T>` untersuchen. In der
    eigenen Vorführkopie ein Feld und einen falschen Wert ausprobieren; Fehler
    lesen und beheben, Build starten. JSON wird nicht durch Typen validiert.
-3. **Komponenten/Hooks (40 min):** Ausgangs-App und Referenzkarte vergleichen;
+3. **Komponenten/Hooks:** Ausgangs-App und Referenzkarte vergleichen;
    Props und Event erklären. Teilnehmende lagern eine Karte aus und ergänzen
    lokale Auswahl. In der Referenz ist die Merkliste bereits im Context
    umgesetzt; das ist ein Vorausblick auf Schritt 5.
-4. **MUI (35 min):** AppBar, Cards, Stack und Theme zeigen. Referenz im
+4. **MUI:** AppBar, Cards, Stack und Theme zeigen. Referenz im
    schmalen/breiten Viewport prüfen; Teilnehmende ändern Layout und Theme.
-5. **Context (40 min):** Suche und Trackfilter in der Referenz bedienen,
-   abgeleitete Liste und `useFavorites` zeigen. Merkliste setzen und zählen.
+5. **Context:** In der Referenz nach „Browser“ suchen, die gefundene Session
+   merken und die Zahl in der AppBar zeigen. Suche löschen und den Trackfilter
+   bedienen; abgeleitete Liste und `useFavorites` zeigen.
    Lokal, abgeleitet und gemeinsam genutzten State unterscheiden.
-6. **Fetch (45 min):** in der Referenz „Fetch: Erfolg“ und „Fetch: Fehler“
-   wählen, Network-Tab und HTTP-Status zeigen. Suche ohne Treffer zeigt den
-   leeren UI-Zustand; ein leeres JSON-Array zeigt den leeren Datenzustand.
+6. **Fetch:** Im Network-Tab „Fetch: Erfolg“, „Fetch: Leer“ und
+   „Fetch: Fehler“ wählen; die Antworten und den HTTP-Status vergleichen.
+   Die leere Datei liefert ein leeres Array; die fehlende Datei liefert dank
+   JSON-Accept-Header einen HTTP-404-Fehler statt der Vite-HTML-Fallbackseite.
+   Mit „Fetch: Erfolg“ wiederherstellen und die erhaltene Merkliste zeigen.
    `Response.ok`, `unknown`, Laufzeitvalidierung und Abort erklären. Für den
-   Ladezustand Netz im Browser drosseln. Die Fehler-Schaltfläche verwendet
-   bewusst eine fehlende Datei; je nach Vite-Fallback kann statt HTTP 404 ein
-   JSON-Parsingfehler angezeigt werden – beides ist ein sichtbarer Fehler.
-7. **Optional/Abschluss (30 min):** nach Tempo AutoRest/OpenAPI, Playwright,
+   Ladezustand Netz im Browser drosseln und danach die Drosselung ausschalten.
+7. **Optional/Abschluss:** nach Tempo AutoRest/OpenAPI, Playwright,
    Konfiguration ohne Secrets, Vite/webpack oder gemessene Performance
    besprechen. Die Checkpoints in den Übungsdateien beantworten.
 
