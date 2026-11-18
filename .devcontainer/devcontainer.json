@@ -1,0 +1,26 @@
+{
+  "name": "React TypeScript Workshop",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:5.2.6-24-bookworm",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "remoteUser": "node",
+  "updateRemoteUserUID": true,
+  "postCreateCommand": "sudo chown -R node:node node_modules && npm ci",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite workshop app",
+      "onAutoForward": "openBrowser",
+      "protocol": "http"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eliostruyf.vscode-demo-time"
+      ]
+    }
+  },
+  "shutdownAction": "stopContainer"
+}

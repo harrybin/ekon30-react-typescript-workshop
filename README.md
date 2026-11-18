@@ -21,6 +21,35 @@ git --version
 
 Auf macOS im Terminal dieselben Prüfungen mit `npm` statt `npm.cmd` ausführen.
 
+## Entwicklungscontainer (VS Code)
+
+Alternativ stellt `.devcontainer/devcontainer.json` eine Linux-Umgebung mit
+Node.js 24, npm und Git bereit. Die Projektabhängigkeiten werden beim Erstellen
+des Containers mit `npm ci` aus dem vorhandenen `package-lock.json` installiert.
+Die Demo-Time-Erweiterung wird in VS Code im Container eingerichtet.
+
+Auf dem Host werden VS Code mit der Erweiterung
+[Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+und eine laufende Docker-Umgebung benötigt (z. B. Docker Desktop; unter Windows
+mit aktiviertem WSL 2- oder Hyper-V-Backend). Node.js und Git müssen auf dem
+Host nicht installiert sein. Repository-Dateien und Browser bleiben auf dem
+Host verfügbar.
+
+Repository in VS Code öffnen und über die Befehlspalette **Dev Containers:
+Reopen in Container** auswählen. Im Container-Terminal den Vite-Server so
+starten, dass die Portweiterleitung ihn erreicht:
+
+```sh
+npm run dev -- --host 0.0.0.0
+```
+
+Port 5173 wird an den Host weitergeleitet und im Browser geöffnet. Falls der
+Port auf dem Host bereits belegt ist, die von VS Code angezeigte lokale Adresse
+verwenden. Die Starter-App ist unter `/` erreichbar, die Referenzdemo unter
+`/workshop-demo/`. Den Server im Terminal mit `Ctrl+C` beenden. Build und
+Übungen verwenden dieselben Projektbefehle wie auf dem Host, zum Beispiel
+`npm run build`.
+
 ## Start unter Windows
 
 Im PowerShell-Terminal im gewünschten übergeordneten Ordner:
