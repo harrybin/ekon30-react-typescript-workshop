@@ -1,6 +1,8 @@
 # Workshop-Übungen
 
 Arbeite in Reihenfolge am Session-Katalog. Jede Übung hat ein Ziel und einen Checkpoint. Nach einem Schritt die App im Browser prüfen und TypeScript/Browser-Konsole beobachten.
+Einrichtung und Start mit PowerShell unter Windows sowie die macOS-Alternative
+stehen in der README im Repository-Root.
 
 ## Ablauf
 

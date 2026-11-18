@@ -53,7 +53,10 @@ function SessionCatalog({ source }: { source: string | null }) {
     const controller = new AbortController()
     async function loadSessions() {
       try {
-        const response = await fetch(url, { signal: controller.signal })
+        const response = await fetch(url, {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        })
         if (!response.ok) throw new Error(`HTTP ${response.status}`)
         const data: unknown = await response.json()
         if (!Array.isArray(data) || !data.every(isSession)) throw new Error('Ungültige Session-Daten')
@@ -106,6 +109,7 @@ export function DemoApp() {
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
             <Button onClick={() => setSource(null)}>Lokale Daten</Button>
             <Button onClick={() => setSource('/sessions.json')}>Fetch: Erfolg</Button>
+            <Button onClick={() => setSource('/empty-sessions.json')}>Fetch: Leer</Button>
             <Button onClick={() => setSource('/fehlende-sessions.json')}>Fetch: Fehler</Button>
           </Stack>
           <Box><SessionCatalog key={source ?? 'local'} source={source} /></Box>

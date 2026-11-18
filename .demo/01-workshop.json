@@ -1,13 +1,12 @@
 {
   "$schema": "https://demotime.show/demo-time.schema.json",
   "title": "React-Workshop: Session-Katalog",
-  "description": "Sieben nichtdestruktive Szenen für vier Stunden",
+  "description": "Sieben nichtdestruktive Szenen für den Workshop",
   "version": 3,
-  "timer": 240,
   "scenes": [
     {
       "id": "tooling",
-      "title": "01 · Tooling und Browser (20 min)",
+      "title": "01 · Tooling und Browser",
       "description": "Entwicklungswerkzeuge und Browser-App unterscheiden.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -17,7 +16,7 @@
     },
     {
       "id": "typescript",
-      "title": "02 · TypeScript und Datenverträge (30 min)",
+      "title": "02 · TypeScript und Datenverträge",
       "description": "Session und ApiResult untersuchen; Typfehler und Laufzeitprüfung besprechen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -27,7 +26,7 @@
     },
     {
       "id": "components",
-      "title": "03 · Komponenten und Hooks (40 min)",
+      "title": "03 · Komponenten und Hooks",
       "description": "Props, Events und lokale Auswahl nachvollziehen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -37,7 +36,7 @@
     },
     {
       "id": "mui",
-      "title": "04 · Material UI und Layout (35 min)",
+      "title": "04 · Material UI und Layout",
       "description": "Theme und responsive Komponenten vergleichen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -47,7 +46,7 @@
     },
     {
       "id": "context",
-      "title": "05 · State, Filter und Context (40 min)",
+      "title": "05 · State, Filter und Context",
       "description": "Abgeleitete Liste und gemeinsame Merkliste zeigen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -57,7 +56,7 @@
     },
     {
       "id": "fetch",
-      "title": "06 · Fetch und Netzwerkzustände (45 min)",
+      "title": "06 · Fetch und Netzwerkzustände",
       "description": "Erfolg, Fehler, leere Liste und Validierung zeigen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
@@ -67,7 +66,7 @@
     },
     {
       "id": "optional",
-      "title": "07 · Vertiefungen und Abschluss (30 min)",
+      "title": "07 · Vertiefungen und Abschluss",
       "description": "Optionen wählen, Checkpoints und Fragen besprechen.",
       "notes": { "path": ".demo/notes.md" },
       "moves": [
