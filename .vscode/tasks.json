@@ -1,0 +1,63 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Workshop: Node-Version",
+      "type": "shell",
+      "command": "node",
+      "args": ["--version"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: npm-Version",
+      "type": "shell",
+      "command": "npm",
+      "windows": { "command": "npm.cmd" },
+      "args": ["--version"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: Git-Version",
+      "type": "shell",
+      "command": "git",
+      "args": ["--version"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: Einrichten",
+      "type": "shell",
+      "command": "npm",
+      "windows": { "command": "npm.cmd" },
+      "args": ["ci"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: Dev-Server",
+      "type": "shell",
+      "command": "npm",
+      "windows": { "command": "npm.cmd" },
+      "args": ["run", "dev"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: Dev-Server im Container",
+      "type": "shell",
+      "command": "npm",
+      "windows": { "command": "npm.cmd" },
+      "args": ["run", "dev", "--", "--host", "0.0.0.0"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Workshop: Build",
+      "type": "shell",
+      "command": "npm",
+      "windows": { "command": "npm.cmd" },
+      "args": ["run", "build"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}
