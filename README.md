@@ -50,6 +50,38 @@ verwenden. Die Starter-App ist unter `/` erreichbar, die Referenzdemo unter
 Übungen verwenden dieselben Projektbefehle wie auf dem Host, zum Beispiel
 `npm run build`.
 
+## VS-Code-Tasks und Vorführung ohne Demo Time
+
+Das Repository als Ordner in VS Code öffnen. Über **Terminal: Run Task**
+in der Befehlspalette stehen folgende Tasks bereit:
+
+| Task | Zweck |
+| --- | --- |
+| `Workshop: Node-Version`, `Workshop: npm-Version`, `Workshop: Git-Version` | Voraussetzungen prüfen |
+| `Workshop: Einrichten` | Einmalig Abhängigkeiten aus dem Lockfile mit `npm ci` installieren |
+| `Workshop: Dev-Server` | Starter-App und Referenz lokal starten |
+| `Workshop: Dev-Server im Container` | Server mit Portweiterleitung im Entwicklungscontainer starten |
+| `Workshop: Build` | TypeScript prüfen und Starter-App bauen |
+
+Für eine frische lokale Kopie reicht **Workshop: Einrichten** als einmaliger
+Init-Schritt; anschließend **Workshop: Dev-Server** starten und die im
+Terminal angezeigte Adresse im Browser öffnen. `npm ci` ersetzt dabei das
+generierte Verzeichnis `node_modules`, aber keine Übungsdateien. Im Container
+entfällt der Init-Task, da der Container die Abhängigkeiten beim Erstellen
+installiert. Den laufenden Server über **Terminal: Terminate Task** beenden.
+
+Für die Vorführung ist Demo Time optional: Die Abschnitte in
+`.demo/talk-plan.md` und die konkreten Schritte in `.demo/notes.md` führen
+in derselben Reihenfolge durch die Übungen. Die dort genannten Dateien im
+Explorer öffnen; Starter-App unter `/` und Referenz unter `/workshop-demo/`
+zeigen. Für den TypeScript-Schritt den Build-Task ausführen.
+
+Für eine Wiederholung die Referenzseite im Browser neu laden: Suche, Filter
+und Merkliste werden dabei zurückgesetzt. Dafür gibt es keinen Shell-Befehl
+und keinen Reset-Task, der Dateien verändert. Selbst geschriebene Änderungen
+in einer eigenen Vorführkopie sichern und dort bei Bedarf bewusst
+zurücksetzen; Teilnehmendenarbeit wird nicht automatisch zurückgesetzt.
+
 ## Start unter Windows
 
 Im PowerShell-Terminal im gewünschten übergeordneten Ordner:
@@ -57,7 +89,7 @@ Im PowerShell-Terminal im gewünschten übergeordneten Ordner:
 ```powershell
 git clone https://github.com/harrybin/ekon30-react-typescript-workshop.git
 cd ekon30-react-typescript-workshop
-npm.cmd install
+npm.cmd ci
 npm.cmd run dev
 ```
 
@@ -77,7 +109,7 @@ Im Terminal im gewünschten übergeordneten Ordner:
 ```sh
 git clone https://github.com/harrybin/ekon30-react-typescript-workshop.git
 cd ekon30-react-typescript-workshop
-npm install
+npm ci
 npm run dev
 ```
 

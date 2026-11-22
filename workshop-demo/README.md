@@ -5,18 +5,16 @@ eigenständiges npm-Projekt. Sie zeigt Komponenten, MUI, Suche, Trackfilter,
 eine gemeinsame Merkliste und Fetch-Zustände, ohne die Starter-App oder die
 Arbeit der Teilnehmenden zu verändern.
 
-Nach der Einrichtung aus der Projekt-README im Repository-Root unter Windows
-PowerShell verwenden:
+Nach der einmaligen Einrichtung aus der Projekt-README den Server im
+Repository-Root unter Windows mit PowerShell starten:
 
 ```powershell
-npm.cmd install
 npm.cmd run dev
 ```
 
 Auf macOS im Terminal:
 
 ```sh
-npm install
 npm run dev
 ```
 
@@ -32,5 +30,7 @@ lassen sich unterschiedliche Zustände vorführen. Die leere Antwort liegt in
 dem JSON-Accept-Header HTTP 404. Suche und Merkliste bleiben im Browser;
 beim Neuladen werden sie zurückgesetzt. Weitere Moderationshinweise und der
 Demo-Time-Ablauf stehen in `.demo/notes.md` und der README im Repository-Root.
+Die Projekt-README beschreibt auch die VS-Code-Tasks und die Durchführung
+ohne Demo Time; ein dateiverändernder Reset ist nicht erforderlich.
 
 Die Referenz unterliegt der [MIT-Lizenz](../LICENSE) des Repositories.
