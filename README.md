@@ -21,6 +21,12 @@ git --version
 
 Auf macOS im Terminal dieselben Prüfungen mit `npm` statt `npm.cmd` ausführen.
 
+Die Workspace-Empfehlungen in `.vscode/extensions.json` lassen sich in VS Code
+unter **Extensions: Show Recommended Extensions** anzeigen und bei Bedarf
+installieren: Demo Time für die Szenen und Dev Containers für den optionalen
+Entwicklungscontainer. Beide sind für die Übungen ohne diese Funktionen nicht
+erforderlich.
+
 ## Entwicklungscontainer (VS Code)
 
 Alternativ stellt `.devcontainer/devcontainer.json` eine Linux-Umgebung mit
